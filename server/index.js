@@ -8,12 +8,12 @@ const app = express();
 //use express.json() to get data into json format
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname,"build")));
-app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"build/index.html"));
+app.use(express.static(path.join(__dirname, "build")));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "build/index.html"));
 });
 //Port 
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 1000;
 
 //use cors
 app.use(cors());
